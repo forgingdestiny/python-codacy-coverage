@@ -103,7 +103,7 @@ def upload_report(report, token, commit):
 
     logging.debug(data)
 
-    r = requests.post(url, data=data, headers=headers, allow_redirects=True)
+    r = requests.post(url, data=data, headers=headers, allow_redirects=True, verify=False)
 
     logging.debug(r.content)
     r.raise_for_status()
